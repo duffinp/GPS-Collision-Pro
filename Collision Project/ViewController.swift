@@ -61,8 +61,11 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let testlat = 63.4313892
         let testlng = 10.4050155
         
-        let offlat = testlat - location.coordinate.latitude
-        let offlng = testlng - location.coordinate.longitude
+        let initlat = 63.415102
+        let initlng = 10.406444
+        
+        let offlat = testlat - initlat
+        let offlng = testlng - initlng
         
         mapView.setRegion(region, animated: true)
         self.mapView.showsUserLocation = true
