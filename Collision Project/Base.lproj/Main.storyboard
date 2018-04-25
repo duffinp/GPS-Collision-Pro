@@ -32,7 +32,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Safe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrZ-k9-nqY">
                                 <rect key="frame" x="20" y="28" width="339" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" red="1" green="0.15735786144797115" blue="0.091515884003724013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.068617923710000001" green="0.14310922679999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6m9-eB-OYW">
@@ -41,21 +41,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2018 Illuminati" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phA-0o-wN7">
+                                <rect key="frame" x="66" y="617" width="243" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="phA-0o-wN7" firstAttribute="top" secondItem="6m9-eB-OYW" secondAttribute="bottom" constant="20" id="57Z-3G-EkY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6m9-eB-OYW" secondAttribute="trailing" constant="75" id="6NT-cL-ug4"/>
                             <constraint firstItem="6m9-eB-OYW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="75" id="B7e-eh-dTE"/>
                             <constraint firstItem="K33-qi-Mgb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Ozt-FQ-cnc"/>
                             <constraint firstItem="lrZ-k9-nqY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="a1h-AK-7Nt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="phA-0o-wN7" secondAttribute="trailing" constant="50" id="fBe-JY-RhW"/>
                             <constraint firstItem="K33-qi-Mgb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="hQk-2n-ZEd"/>
                             <constraint firstItem="lrZ-k9-nqY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iXh-Lt-9ht"/>
                             <constraint firstItem="lrZ-k9-nqY" firstAttribute="top" secondItem="yom-8G-iMY" secondAttribute="bottom" constant="8" id="lZ5-hm-5my"/>
                             <constraint firstItem="uAz-dj-efB" firstAttribute="top" secondItem="6m9-eB-OYW" secondAttribute="bottom" constant="70" id="qme-5x-MS1"/>
                             <constraint firstItem="K33-qi-Mgb" firstAttribute="top" secondItem="lrZ-k9-nqY" secondAttribute="bottom" constant="50" id="wAw-Df-FNs"/>
+                            <constraint firstItem="phA-0o-wN7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="yIF-DY-tCj"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="Copyright" destination="phA-0o-wN7" id="kq4-vp-1xw"/>
                         <outlet property="Warning" destination="lrZ-k9-nqY" id="paZ-j2-A5s"/>
                         <outlet property="mapView" destination="K33-qi-Mgb" id="HJy-c9-ize"/>
                         <outlet property="speedLabel" destination="6m9-eB-OYW" id="s8X-WC-qRf"/>

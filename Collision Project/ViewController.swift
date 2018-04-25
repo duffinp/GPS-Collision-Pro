@@ -15,6 +15,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var Warning: UILabel!
     @IBOutlet weak var speedLabel: UILabel!
+    @IBOutlet weak var Copyright: UILabel!
     
     var movedToUserLocation = false
     
@@ -28,6 +29,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
             self.mapView.showsUserLocation = true
+        //self.Copyright.text = "2018 Illuminati"
         
         
         
@@ -52,25 +54,26 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         let location = locations[0]
         
-        let span = MKCoordinateSpanMake(0.03, 0.03)
+        let span = MKCoordinateSpanMake(0.02, 0.02)
         let myLocation = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
         let region = MKCoordinateRegionMake(myLocation, span)
+        
         let depthBound = 2.0 as NSNumber
         
         
-        let testlat = 63.4313892
-        let testlng = 10.4050155
+        //let testlat = 63.4313892
+        //let testlng = 10.4050155
         
-        let initlat = 63.415102
-        let initlng = 10.406444
+        //let initlat = 63.415102
+        //let initlng = 10.406444
         
-        let offlat = testlat - initlat
-        let offlng = testlng - initlng
+        //let offlat = testlat - initlat
+        //let offlng = testlng - initlng
         
         mapView.setRegion(region, animated: true)
         self.mapView.showsUserLocation = true
         
-        let strtest = "http://188.166.59.108:3000/api/v1/test?lat=\(location.coordinate.latitude + offlat)&lng=\(location.coordinate.longitude + offlng)&vel=100&bearing=0"
+        let strtest = "http://188.166.59.108:3000/api/v1/test?lat=\(location.coordinate.latitude)&lng=\(location.coordinate.longitude)&vel=100&bearing=0"
         //let strtest = "http://188.166.59.108:3000/api/v1/test?lat=\(testlat)&lng=\(testlng)&vel=10&bearing=0"
         let url = URL(string: strtest)
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
