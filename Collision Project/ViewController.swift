@@ -54,7 +54,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         let location = locations[0]
         
-        let span = MKCoordinateSpanMake(0.02, 0.02)
+        let span = MKCoordinateSpanMake(0.008, 0.008)
         let myLocation = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
         let region = MKCoordinateRegionMake(myLocation, span)
         
@@ -90,11 +90,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                             if (minima.floatValue < depthBound.floatValue) {
                                 DispatchQueue.main.async( execute: {
                                     self.Warning.text = "WARNING!!!"
+                                    self.Warning.textColor = UIColor.red
                                 })
                             }
                             else {
                                 DispatchQueue.main.async( execute: {
                                     self.Warning.text = "Safe"
+                                    self.Warning.textColor = UIColor.blue
                                 })
                             }
                         }
